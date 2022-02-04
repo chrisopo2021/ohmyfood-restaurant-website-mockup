@@ -1,0 +1,503 @@
+@import "./utils/variables";
+
+// * @media only screen and (max-width: 480px) 
+
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0%;
+padding-top: 20px;
+font-size: 12px;
+    }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    }
+
+.inputfield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input, textarea { 
+    text-align: center; 
+    background-color: #e6e6e6;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: inset 0 5px 5px -7px black;
+    
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.taglines {
+    background-color: #f2f2f2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    padding-bottom: 45px;
+}
+
+
+.tagline1, .tagline2 {
+    padding-bottom: 5px;
+}
+
+.btn-explore {
+    background-color: $primary-color;
+    background-image: linear-gradient(to top, $primary-color 0%,  $secondary-color 100%);
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    width: 170px;
+    height: 20px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all $trans-dur cubic-bezier(.49,0,.49,0);
+    
+  
+}
+
+.btn-explore:hover {
+    background-image: linear-gradient(to bottom, $primary-color 0%,  $secondary-color 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    transition: all $trans-dur cubic-bezier(.49,0,.49,0);
+    margin: 8px 10px 12px;
+    width: 185px;
+    height: 30px;
+    padding-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+.btn-order {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.fas {
+    position: absolute;
+    padding-right: 110px;
+}
+
+.howitworks {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
+}
+
+.btn-numbers {
+    background-color: $primary-color;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;  
+    height: 12px; 
+    margin-top: 20px;
+    color: white;
+    position: absolute;
+    margin-left: -10px;
+     
+}
+
+.btn-combined {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.btn-icon {
+    padding-left: 10px;
+    border-radius: 25px;  
+    width: 260px;
+    height: 35px;
+    padding-top: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    background-color: #f2f2f2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all $trans-dur cubic-bezier(.49,0,.49,0); 
+}
+
+.btn-icon:hover {
+    background-color: #9256dc25;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all $trans-dur cubic-bezier(.49,0,.49,0); 
+    margin: 0px 10px 12px;
+    cursor: pointer;
+}
+
+.fa {
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+.far {
+    position: absolute;
+    display: flex;
+    margin-left: 225px;
+    margin-top: -10px;
+    color: $primary-color;
+    
+}
+
+.restaurants {
+    padding-left: 15px;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.restaurant-tiles-column {
+    display: flex;
+    border: 0px solid white;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    width: 265px;
+ }
+
+ .img3 {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    object-fit: cover;
+}
+
+.caption3 {
+    display: block;
+    color: black;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: white;
+    font-weight: bolder;
+    text-align:left;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+a:link { text-decoration: none; }
+
+.caption2 {
+    display: block;
+    color: black;
+    font-size: 13px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    padding-left: 1px;
+    background-color: white;
+    text-align:left;
+    margin-left: 14px;
+    margin-top: 30px;
+}
+
+.caption5 {
+    display: inline-block;
+    color: black;
+    font-size: 13px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 1px;
+    background-color: white;
+    text-align: left;
+    margin-left: 14px;
+    margin-top: 3px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.restaurant-tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-new {
+    border-radius: 2px;
+    border: 1px solid $tertiary-color;
+    background-color: $tertiary-color;
+    position: absolute;
+    margin-left: 195px;
+    margin-top: 10px;
+    width: 55px;
+    height: 18px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Shrikhand', cursive;
+    background-color: #2f373df2;
+    color: white;
+    padding : 15px;
+    font-size: 14px;
+}
+
+.suggest, .become {
+    background-color: #2f373df2;
+    color: white;
+    padding: 2px;
+    padding-left: 15px;
+
+}
+
+.legal, .contact {
+    background-color: #2f373df2;
+    color: white;
+    padding: 2px;
+    padding-left: 40px;
+
+}
+
+.fa-utensils {
+    position: relative;
+    padding-right: 15px;
+}
+
+.fa-hands-helping {
+    position: relative;
+    padding-right: 10px;
+}
+
+.fa-arrow-left {
+    position: absolute;
+    margin-right: 155px;
+}
+
+.menu-logo {
+    font-family: 'Shrikhand', cursive;
+    font-size: 24px;
+    background-color: #f2f2f2;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-left: 15px;
+    margin-top: -25px;
+    padding-top: 20px;
+
+}
+
+.menu-img1 { 
+    background-image: url('/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    background-size: cover;
+    width: 320px;
+    height: 200px;
+
+ }
+
+ .menu-heart {
+     padding-left: 50px;
+     margin-top: -20px;
+     color: $primary-color;
+ }
+
+ .entrees {
+     padding-top: 25px;
+     padding-left: 15px;
+     background-color: #f2f2f2;
+     height: 100%;
+     position: relative;
+     margin-top: 20px;
+ }
+
+ .main-dish, .desserts {
+    padding-top: 25px;
+    padding-left: 15px;
+    background-color: #f2f2f2;
+    height: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+ .entrees:before, .main-dish:before, .desserts:before {
+    content : "";
+    position: absolute;
+    left    : 15px;
+    bottom  : -5px;
+    height  : 1px;
+    width   : 10%;  /* or 100px */
+    border-bottom: 2px solid $tertiary-color;
+ }
+
+ .menu-tiles-column {
+    display: flex;
+    border: 0px solid white;
+
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 0px;
+    border-radius: 10px;
+    width: 290px;
+    margin-top: 15px;
+ }
+
+ .menu-tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.caption4 {
+    display: block;
+    color: black;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    background-color: white;
+    font-weight: bolder;
+    text-align:left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+}
+
+.fa-check-circle {
+    visibility:hidden;
+    color: white;
+    background-color: $tertiary-color;
+    padding-right: 16px;
+    margin-left: 235px;
+    margin-top: 0px;
+    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-left: 16px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;    
+}
+
+
+
+.caption-price {
+    position: absolute;
+    margin-left: 250px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
+
+.fa-heart {
+
+    background-clip: text;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: rgb(166, 166, 166);
+    margin-left: 225px;
+    margin-top: -10px;
+}
+
+.fa-heart:hover {
+    background: linear-gradient(to top, $primary-color 0%,  $secondary-color 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+}
+
+.fa-heart:active {
+    animation: fill 3s 1s forwards;
+    background: linear-gradient(to top, $primary-color 0%,  $secondary-color 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+}
+
+@keyframes fill {
+    0% {
+        transform: scale(0);
+        transform-origin: left;
+    }
+    
+    25% {
+        
+    }
+
+    50% {
+        
+    }
+
+    100% {
+        transform: scale(1); 
+        transform-origin: left;
+
+        
+    }
+    
+}
+
+section {
+    background-color: #f2f2f2;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid $secondary-color;
+    border-radius: 50%;
+    border-top: 16px solid $primary-color;
+    border-right: 16px solid $secondary-color;
+    border-bottom: 16px solid $tertiary-color;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    visibility: hidden;
+    
+    
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+  
