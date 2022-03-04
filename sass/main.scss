@@ -1,6 +1,5 @@
 @import "./utils/variables";
 
-// * @media only screen and (max-width: 480px) 
 
 body {
 font-family: 'Roboto', sans-serif;
@@ -106,6 +105,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    align-items: center;
 
 }
 
@@ -306,9 +306,33 @@ a:link { text-decoration: none; }
 .menu-img1 { 
     background-image: url('/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
     background-size: cover;
-    width: 320px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2/1;
+ }
 
+ .menu-img2 { 
+    background-image: url('/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2/1;
+ }
+
+ .menu-img3 { 
+    background-image: url('/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2/1;
+ }
+
+ .menu-img4 { 
+    background-image: url('/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2/1;
  }
 
  .menu-heart {
@@ -348,7 +372,6 @@ a:link { text-decoration: none; }
  .menu-tiles-column {
     display: flex;
     border: 0px solid white;
-
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 0px;
@@ -380,8 +403,35 @@ a:link { text-decoration: none; }
     position: absolute;
 }
 
+.caption-price {
+    position: absolute;
+    margin-left: 250px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    &:active {
+        animation: slide ease-in-out 500ms;
+        margin-left: 205px;
+    }
+    &:active + .fa-check-circle{
+        animation: show ease-in-out 600ms;
+        visibility: visible;
+    }   
+}
+
+@keyframes slide {
+    from {
+        margin-left: 250px
+    }
+    to {
+        margin-left: 205px;
+    }
+}
+
+
 .fa-check-circle {
-    visibility:hidden;
+    visibility: hidden;
     color: white;
     background-color: $tertiary-color;
     padding-right: 16px;
@@ -391,22 +441,11 @@ a:link { text-decoration: none; }
     padding-top: 16px;
     padding-left: 16px;
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;    
-}
-
-
-
-.caption-price {
-    position: absolute;
-    margin-left: 250px;
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-    margin-top: 20px;
+    border-bottom-right-radius: 10px; 
+    z-index: 1; 
 }
 
 .fa-heart {
-
     background-clip: text;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: rgb(166, 166, 166);
@@ -432,7 +471,7 @@ a:link { text-decoration: none; }
 @keyframes fill {
     0% {
         transform: scale(0);
-        transform-origin: left;
+        transform-origin: center;
     }
     
     25% {
@@ -445,9 +484,7 @@ a:link { text-decoration: none; }
 
     100% {
         transform: scale(1); 
-        transform-origin: left;
-
-        
+        transform-origin: center; 
     }
     
 }
@@ -456,11 +493,10 @@ section {
     background-color: #f2f2f2;
 }
 
-#loader {
+.loader {
     position: absolute;
     left: 50%;
     top: 50%;
-    z-index: 1;
     width: 120px;
     height: 120px;
     margin: -76px 0 0 -76px;
@@ -471,33 +507,123 @@ section {
     border-bottom: 16px solid $tertiary-color;
     width: 120px;
     height: 120px;
-    animation: spin 2s linear infinite;
-    visibility: hidden;
-    
-    
+    animation: spin 3s forwards cubic-bezier(.19,.33,1,.48);
+    z-index: 2;
   }
 
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% { 
+        transform: rotate(0deg); 
+        opacity: 1;
+    }
+    50% { 
+   
+    }
+    100% { 
+        transform: rotate(360deg); 
+        opacity: 0;
+    }
+      }
+
+  @keyframes show {
+
+    from {
+        opacity: 0;
+    }
+    to {
+		opacity: 1;
+    }
   }
 
-  .animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
+  .container-load {
+    animation: load ease-in-out 4s;
   }
 
-  @-webkit-keyframes animatebottom {
-    from { bottom:-100px; opacity:0 } 
-    to { bottom:0px; opacity:1 }
+  .menu-item-1 {
+      animation: load ease-in-out 1.5s;
+
   }
   
-  @keyframes animatebottom { 
-    from{ bottom:-100px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
+  .menu-item-2 {
+      animation: load ease-in-out 2s;
+  }
+  
+  .menu-item-3 {
+      animation: load ease-in-out 2.8s;
   }
 
-  
+  .menu-item-4 {
+      animation: load ease-in-out 3s;
+  }
+
+  @keyframes load {
+      0% {
+          opacity: 0;
+          margin: 0;
+      }
+
+      100% {
+          opacity: 1;
+
+      }
+  }
+
+ @media only screen and (min-width: 481px)
+                    and (max-width: 668px) {
+
+    .menu-logo {
+        font-size: 30px
+    }
+
+    .fa-heart {
+        display: flex;
+        justify-content: end;
+    }
+
+
+    .main-dish, .entrees, .desserts {
+        font-size: 14px;
+    }
+    .menu-heart {
+        display: flex;
+        justify-content: end;
+    }
+
+}
+
+@media only screen and (min-width: 669px)
+{               
+
+    .menu-logo {
+            font-size: 36px;
+    
+        }    
+
+        .menu-heart {
+            display: flex;
+            justify-content: end;
+        }
+
+        .main-dish, .entrees, .desserts {
+            font-size: 14px;
+        }
+        
+    }
+         
+
+         @media only screen and (min-width: 1025px)
+    {
+
+.menu-logo {
+        display: flex;
+        justify-content: center;
+    }
+
+.btn-numbers {
+    margin-left: -270px;
+}    
+
+.btn-combined {
+    justify-content: center;
+}
+}
