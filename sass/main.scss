@@ -91,8 +91,10 @@ h2 {
 }
 
 .btn-order {
+    display: flex;
     padding-top: 40px;
     padding-bottom: 40px;
+    justify-content: center;
 }
 
 .fas {
@@ -233,11 +235,18 @@ a:link { text-decoration: none; }
     margin-bottom: 10px;
 }
 
-.restaurant-tiles {
+.restaurant-tiles1 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.restaurant-tiles2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .btn-new {
     border-radius: 2px;
@@ -365,7 +374,7 @@ a:link { text-decoration: none; }
     left    : 15px;
     bottom  : -5px;
     height  : 1px;
-    width   : 10%;  /* or 100px */
+    width   : 10%; 
     border-bottom: 2px solid $tertiary-color;
  }
 
@@ -417,8 +426,9 @@ a:link { text-decoration: none; }
     &:active + .fa-check-circle{
         animation: show ease-in-out 600ms;
         visibility: visible;
-    }   
+    }  
 }
+
 
 @keyframes slide {
     from {
@@ -454,19 +464,13 @@ a:link { text-decoration: none; }
 }
 
 .fa-heart:hover {
-    background: linear-gradient(to top, $primary-color 0%,  $secondary-color 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-}
-
-.fa-heart:active {
     animation: fill 3s 1s forwards;
     background: linear-gradient(to top, $primary-color 0%,  $secondary-color 100%);
     background-clip: text;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent; 
 }
+
 
 @keyframes fill {
     0% {
@@ -568,6 +572,10 @@ section {
       }
   }
 
+  footer {
+      background-color: #2f373df2;
+  }
+
  @media only screen and (min-width: 481px)
                     and (max-width: 668px) {
 
@@ -589,6 +597,7 @@ section {
         justify-content: end;
     }
 
+
 }
 
 @media only screen and (min-width: 669px)
@@ -607,6 +616,24 @@ section {
         .main-dish, .entrees, .desserts {
             font-size: 14px;
         }
+
+        .restaurant-tiles1 {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        .restaurant-tiles2 {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .footer {
+            display: flex;
+            background-color: #2f373df2;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        
         
     }
          
@@ -626,4 +653,24 @@ section {
 .btn-combined {
     justify-content: center;
 }
+.howitworks {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 12px;
+
 }
+.restaurant-tiles1 {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.restaurant-tiles2 {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menu-tiles {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+    }
